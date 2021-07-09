@@ -27,8 +27,8 @@ function ShoppingList({getItems, deleteItem, item}) {
         <br />
     <ListGroup>
     <TransitionGroup className="shopping-list">
-        {items.map(({id, name})=>(
-            <CSSTransition key={id} timeout={500} classNames="fade">
+        {items.map(({_id, name})=>(
+            <CSSTransition key={_id} timeout={500} classNames="fade">
                 <ListGroupItem>
 
                     <Button
@@ -36,7 +36,7 @@ function ShoppingList({getItems, deleteItem, item}) {
                     color="danger"
                     size="sm"
                     
-                    onClick={() => onDeleteItem(id)}
+                    onClick={() => onDeleteItem(_id)}
                     >
                     &times;
                     </Button>

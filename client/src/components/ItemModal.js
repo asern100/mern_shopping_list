@@ -15,7 +15,7 @@ const ItemModal = ({addItem}) => {
     const handleAdd = () =>{
         
         if(name.length > 2){
-            addItem(name)
+            addItem({'name' :name})
             toggle()
         }
         else {
