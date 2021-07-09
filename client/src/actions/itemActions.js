@@ -7,9 +7,10 @@ export const getItems = () =>{
     }
 }
 
-export const addItem = () =>{
+export const addItem = name =>{
     return {
         type: ADD_ITEM,
+        payload: name
     }
 }
 

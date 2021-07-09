@@ -18,7 +18,9 @@ export default function(state = initialState, action){
             }
         case ADD_ITEM:
             return {
-                ...state
+                ...state,
+                items : [...state.items , {id : uuid(), name: action.payload}]
+                
             }
         case DELETE_ITEM:
             return {

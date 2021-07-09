@@ -4,7 +4,7 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import { connect } from 'react-redux';
 import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
-
+import ItemModal from './ItemModal';
 
 function ShoppingList({getItems, deleteItem, item}) {
     
@@ -23,7 +23,8 @@ function ShoppingList({getItems, deleteItem, item}) {
 
     return (
         <Container>
-        
+        <ItemModal />
+        <br />
     <ListGroup>
     <TransitionGroup className="shopping-list">
         {items.map(({id, name})=>(
